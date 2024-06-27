@@ -1,23 +1,19 @@
 #-*- coding: utf-8 -*-
-import requests
 import time
-import json
-
-# sk-proj-jaFGFErS1eBqy0xzPv10T3BlbkFJL9UiAqMn3VCiPVv2G8VO
-# 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
 
 from openai import OpenAI
 import streamlit as st
-
 input_text = ''
 # with open('Input.txt', 'r') as file:
 #         input_text = file.read().replace('\n', '')
 
-st.title("GST CHAT ADVISOR")
+st.title("GST ADVISOR")
 
 input_text = st.text_input("Ask your Question")
 
-client = OpenAI(api_key='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')
+openapi_key = st.secrets['openapi_key']
+
+client = OpenAI(api_key=openapi_key)
 
 
 
@@ -66,13 +62,7 @@ def main():
       else:
           st.write("Sorry Didnt Get Anything")
 
-      
-
-
 
 
 if __name__ == '__main__':
     main()
-
-
-

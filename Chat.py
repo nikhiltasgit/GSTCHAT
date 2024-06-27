@@ -4,6 +4,7 @@ import time
 import json
 
 # sk-proj-jaFGFErS1eBqy0xzPv10T3BlbkFJL9UiAqMn3VCiPVv2G8VO
+# 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
 
 from openai import OpenAI
 import streamlit as st
@@ -16,7 +17,7 @@ st.title("GST CHAT ADVISOR")
 
 input_text = st.text_input("Ask your Question")
 
-client = OpenAI(api_key='sk-proj-jaFGFErS1eBqy0xzPv10T3BlbkFJL9UiAqMn3VCiPVv2G8VO')
+client = OpenAI(api_key='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')
 
 
 
